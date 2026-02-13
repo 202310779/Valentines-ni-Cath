@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Valentines Cath 💖</title>
+  <meta name="description" content="A little Valentine surprise for Cath" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="moving-light" aria-hidden="true"></div>
+  <div class="hearts-layer" aria-hidden="true"></div>
+  <div class="flowers-layer" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="hero" role="banner">
+      <h1 class="title">Happy Valentines Cath</h1>
+      <p class="subtitle">I Loveee Youuuu</p>
+      <div class="cta-group">
+        <button class="btn btn-primary" id="openLetterBtn" aria-haspopup="dialog" aria-controls="loveLetterDialog">Open Letter 💌</button>
+        <button class="btn btn-secondary" id="toggleMusicBtn">Play Music ♪</button>
+        <!-- Dark mode is now the only theme -->
+      </div>
+    </section>
+    
+    <!-- Photo Gallery -->
+    <section class="gallery" aria-label="Photo gallery of our moments">
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Replace these with your own photos in the photos/ folder -->
+        <a class="gallery-item" href="photos/sm1.jpg" data-index="0">
+          <img class="gallery-thumb" src="photos/sm1.jpg" alt="A sweet memory 1" loading="lazy" />
+        </a>
+        <a class="gallery-item" href="photos/sm2.jpg" data-index="1">
+          <img class="gallery-thumb" src="photos/sm2.jpg" alt="A sweet memory 2" loading="lazy" />
+        </a>
+        <a class="gallery-item" href="photos/park.jpg" data-index="2">
+          <img class="gallery-thumb" src="photos/park.jpg" alt="A sweet memory 3" loading="lazy" />
+        </a>
+        <a class="gallery-item" href="photos/apertura.jpg" data-index="3">
+          <img class="gallery-thumb" src="photos/apertura.jpg" alt="A sweet memory 4" loading="lazy" />
+        </a>
+        <a class="gallery-item" href="photos/yatch.jpg" data-index="4">
+          <img class="gallery-thumb" src="photos/yatch.jpg" alt="A sweet memory 5" loading="lazy" />
+        </a>
+        <a class="gallery-item" href="photos/cc.jpg" data-index="5">
+          <img class="gallery-thumb" src="photos/cc.jpg" alt="A sweet memory 6" loading="lazy" />
+        </a>
+      </div>
+    </section>
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">💞</div>
+        <h3>Always</h3>
+        <p>No matter what, my heart is always yours.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌷</div>
+        <h3>Gentle</h3>
+        <p>Your kindness makes every day softer and brighter.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3>Magic</h3>
+        <p>Even the simplest moments with you feel magical.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Love Letter Modal -->
+  <dialog id="loveLetterDialog" class="letter-dialog">
+    <form method="dialog" class="letter">
+      <button class="close" aria-label="Close">✕</button>
+      <h2>To Cath, with love 💖</h2>
+      <p>
+        Thank you for always being here beside me, for supporting me even when I’m not at my best. Thank you for your patience, for understanding me, and for being my calm when things get heavy.
+
+I’m really grateful for you, your care, your laughter, and the way you make my days feel lighter and happier. You don’t even realize how much strength and comfort you give me just by being you.
+      </p>
+      <p>
+        Thank you for being you. I’m so lucky to call you mine.
+      </p>
+      <p class="signature">— From Vincent Ong</p>
+    </form>
+  </dialog>
+
+  <!-- Gallery Lightbox Modal -->
+  <dialog id="galleryLightbox" class="lightbox-dialog" aria-label="Photo viewer">
+    <form method="dialog" class="lightbox">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-prev" aria-label="Previous">‹</button>
+      <button class="lightbox-next" aria-label="Next">›</button>
+      <img id="lightboxImage" alt="Expanded photo" />
+      <div class="lightbox-counter" id="lightboxCounter" aria-live="polite"></div>
+    </form>
+  </dialog>
+
+  <!-- Soft background music (optional) -->
+  <!-- Place your music file (e.g., love-song.mp3) in the project folder -->
+  <audio id="bgMusic" loop>
+    <source src="LeeHi - ONLY (Lyrics).mp3" type="audio/mp3" />
+    <!-- If you want to use another format, add another <source> -->
+    Your browser does not support the audio element.
+  </audio>
+
+  <footer class="footer">
+    <small>Made by Imong Bebe </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
